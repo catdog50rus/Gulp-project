@@ -14,5 +14,13 @@ $(function(){
         focusOnSelect: true
     });
 
+    $('.surf-slider').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        prevArrow: '<img class="slider-arrows slider-arrow__left" src = "images/arrow-left.svg" alt = "">',
+        nextArrow: '<img class="slider-arrows slider-arrow__right" src = "images/arrow-right.svg" alt = "">',
+        focusOnSelect: true,
+    });
+
   
 });

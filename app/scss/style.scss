@@ -11,7 +11,6 @@
         font-weight: 800;
         font-size: 200px;
         line-height: 156px;
-        text-transform: uppercase;
         max-width: 467px;
         opacity: 0.07;
         position: absolute;
@@ -19,13 +18,14 @@
         left: 0;
         z-index: 4;
     }
-    .header__arrows{
+
+    .header__arrows {
         position: absolute;
         bottom: 30px;
         left: 210px;
         z-index: 3;
     }
-   
+
     .header__map {
         position: absolute;
         top: 0;
@@ -35,10 +35,11 @@
         .line-animation {
             stroke-dashoffset: 600;
             stroke-dasharray: 600;
-            animation: animdash 5s infinite 6s; 
+            animation: animdash 5s infinite 6s;
         }
+
         @keyframes animdash {
-            to{
+            to {
                 stroke-dashoffset: 0;
             }
         }
@@ -52,24 +53,22 @@
         border-right: 1px solid rgba(#fff, 0.25);
         height: 100vh;
         text-align: center;
-        color: #fff;
+
 
         &-menu {
             padding-top: 40px;
+            text-transform: capitalize;
 
-            a {
-                color: #fff;
-
-                span {
-                    display: block;
-                    font-weight: 500;
-                    font-size: 12px;
-                    line-height: 14px;
-                    letter-spacing: 3px;
-                    padding-top: 6px;
-                    margin-bottom: 22px;
-                }
+            a span {
+                display: block;
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 14px;
+                letter-spacing: 3px;
+                padding-top: 6px;
+                margin-bottom: 22px;
             }
+
         }
 
         &-search {
@@ -101,6 +100,7 @@
             letter-spacing: 1.05px;
             position: relative;
             padding-left: 19px;
+            text-transform: capitalize;
 
             &::before {
                 content: "";
@@ -129,7 +129,6 @@
             right: 80px;
             bottom: 116px;
             text-align: right;
-            text-transform: uppercase;
 
             .slider-item__info-subtitle {
                 margin-bottom: 5px;
@@ -155,19 +154,6 @@
 
         }
 
-        .slider-arrows {
-            position: absolute;
-            top: 40px;
-            right: 80px;
-            cursor: pointer;
-            z-index: 3;
-
-        }
-
-        .slider-arrow__left {
-            right: 125px;
-        }
-
     }
 
     .slider-dots {
@@ -176,7 +162,8 @@
         right: 50px;
         max-width: 920px;
         width: 100%;
-        color: #fff;
+        text-transform: capitalize;
+
 
         .slick-current {
             .dots-box {
@@ -211,7 +198,105 @@
     }
 }
 
+.surf {
+    padding: 160px 0 120px;
+    background-image: url(../images/surf-poi.png);
+    background-position: right 200px;
+    background-repeat: no-repeat;
+    background-size: auto;
 
+    &__subtitle {
+        text-align: right;
+        padding-right: 80px;
+        margin-top: -86px;
+    }
+
+    .surf-slider {
+        padding-top: 110px;
+
+        .slider-arrows {
+            top: 50px;
+            opacity: .25;
+        }
+
+        .slick-slide:nth-child(4n + 1) {
+            .surf-box {
+                margin-top: 32px;
+            }
+        }
+
+        .slick-slide:nth-child(4n + 3) {
+            .surf-box {
+                margin-top: 89px;
+            }
+        }
+
+
+        .slick-current {
+            .btn {
+                display: block;
+            }
+
+            .surf-box__inner {
+                background: rgba(#1C2121, 0.3);
+            }
+        }
+    }
+
+    &-box {
+
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        cursor: pointer;
+
+        &__inner {
+            min-height: 750px;
+            background: rgba(#1C2121, 0.85);
+            position: relative;
+            transition: all 0.5s;
+
+            &:hover {
+                background: rgba(#1C2121, 0.3);
+            }
+
+            &-title {
+                font-weight: 800;
+                font-size: 40px;
+                line-height: 36px;
+                padding: 72px 0 0 40px;
+                width: 140px;
+            }
+
+            &-location {
+                font-size: 18px;
+                line-height: 22px;
+                letter-spacing: 8px;
+                transform: rotate(-90deg);
+                position: absolute;
+                width: 0;
+                height: 0;
+                left: 40px;
+                bottom: 80px;
+                white-space: nowrap;
+
+                span {
+                    font-weight: 100;
+                }
+            }
+
+            &-btn {
+                position: absolute;
+                bottom: 0;
+                text-align: center;
+                right: 0;
+                left: 0;
+            }
+        }
+
+    }
+
+}
 
 
 
