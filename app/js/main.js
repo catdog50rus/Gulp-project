@@ -20,6 +20,15 @@ $(function(){
         prevArrow: '<img class="slider-arrows slider-arrow__left" src = "images/arrow-left.svg" alt = "">',
         nextArrow: '<img class="slider-arrows slider-arrow__right" src = "images/arrow-right.svg" alt = "">',
         focusOnSelect: true,
+        asNavFor: '.slider__surf-map',
+    });
+
+    $('.slider__surf-map').slick({
+        slidesToShow: 8,
+        slidesToScroll: 1,
+        arrows: false,
+        focusOnSelect: true,
+        asNavFor: '.surf-slider',
     });
 
   

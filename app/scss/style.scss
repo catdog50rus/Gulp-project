@@ -211,6 +211,200 @@
         margin-top: -86px;
     }
 
+    .slider__surf-map {
+        width: 1200px;
+        min-height: 635px;
+        background-image: url(../images/worldmapdots.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        margin: 0 auto;
+        position: relative;
+
+
+
+        .slider__surf-item {
+            position: relative;
+        }
+
+        .slick-list {
+            min-height: 635px;
+        }
+
+        .slick-current {
+            .surf-item__content {
+                display: block;
+                width: 285px;
+                padding: 28px 31px 31px 32px;
+            }
+        }
+
+        .surf-item__circle {
+            width: 24px;
+            height: 24px;
+            background-color: $green;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .slider__surf-dots--01 {
+            top: 335px;
+            left: 0;
+
+            .surf-item__content {
+                transform: translateX(0);
+
+                &::before {
+                    left: 0;
+                }
+            }
+        }
+
+        .slider__surf-dots--02 {
+            top: 295px;
+            left: 0;
+
+            .surf-item__circle {
+                position: relative;
+
+
+                &::before {
+                    content: "";
+                    background-image: url(../images/map-marker-small.png);
+                    position: absolute;
+                    width: 14px;
+                    height: 17px;
+                    background-size: cover;
+
+                    top: -20px;
+                    right: -20px;
+
+                }
+            }
+        }
+
+        .slider__surf-dots--03 {
+            top: 320px;
+            left: 30px;
+        }
+
+        .slider__surf-dots--04 {
+            top: 500px;
+            left: -40px;
+        }
+
+        .slider__surf-dots--05 {
+            top: 215px;
+            left: -70px;
+        }
+
+        .slider__surf-dots--06 {
+            top: 560px;
+            left: -115px;
+        }
+
+        .slider__surf-dots--07 {
+            top: 390px;
+            left: -100px;
+        }
+
+        .slider__surf-dots--08 {
+            top: 500px;
+            left: 40px;
+
+            .surf-item__content {
+                transform: translateX(-261px);
+
+                &::before {
+                    right: 0;
+                    left: auto;
+                }
+            }
+        }
+
+        .surf-item__content {
+            display: none;
+            background: rgba(#0F1010, 0.7);
+            border-radius: 6px;
+            position: absolute;
+            bottom: 35px;
+            transform: translateX(-50%);
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 0;
+                height: 0;
+                border-bottom: 20px solid $green;
+                border-left: 12px solid transparent;
+                border-right: 12px solid transparent;
+                bottom: -20px;
+                left: 50%;
+                border-bottom-left-radius: 12px;
+                border-bottom-right-radius: 12px;
+
+            }
+
+            &-row {
+                display: flex;
+                justify-content: space-between;
+
+                .surf-item__content-title {
+                    font-weight: 800;
+                    font-size: 18px;
+                    line-height: 26px;
+                    padding-bottom: 8px;
+                    margin-bottom: 8px;
+                    position: relative;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        background-color: $green;
+                        width: 80px;
+                        height: 1px;
+                        bottom: 0;
+                        left: 0;
+                    }
+
+                }
+
+                .surf-item__content-subtitle {
+                    font-weight: normal;
+                    font-size: 16px;
+                    line-height: 19px;
+                    text-transform: capitalize;
+                    margin-bottom: 30px;
+                }
+
+                .surf-item__content-item {
+                    text-align: center;
+
+
+
+                    img {
+                        margin-bottom: 7px;
+
+                    }
+
+                    .surf-item__content-num {
+                        font-weight: 800;
+                        font-size: 16px;
+                        line-height: 23px;
+                        margin-bottom: 8px;
+                    }
+
+                    .surf-item__content-name {
+                        font-weight: 300;
+                        font-size: 10px;
+                        line-height: 12px;
+                    }
+                }
+            }
+        }
+
+    }
+
     .surf-slider {
         padding-top: 110px;
 
