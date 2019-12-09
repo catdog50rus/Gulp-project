@@ -497,7 +497,9 @@
     background-image: url(../images/travel-bg.png);
     background-position: bottom right;
     background-repeat: no-repeat;
-
+    .slider-arrows {
+                    top: 225px;
+                }
     &-slider {
         &__head {
             background-repeat: no-repeat;
@@ -512,16 +514,27 @@
             background-repeat: no-repeat;
             background-position: right center;
 
-            img {
-                padding-left: 24px;
+            .description__head{
+                position: relative;
+                padding-right: 78px;
+                img {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
             }
+            }
+
+            
 
         }
 
         &__subtitle {
             text-align: right;
             padding: 132px 80px 0 0;
+            
         }
+        
+        
 
         &__info {
             display: flex;

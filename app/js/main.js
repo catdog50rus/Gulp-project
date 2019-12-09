@@ -17,8 +17,8 @@ $(function(){
     $('.surf-slider').slick({
         slidesToShow: 4,
         slidesToScroll: 1,
-        prevArrow: '<img class="slider-arrows slider-arrow__left" src = "images/arrow-left.svg" alt = "">',
-        nextArrow: '<img class="slider-arrows slider-arrow__right" src = "images/arrow-right.svg" alt = "">',
+        prevArrow: '<img class="slider-arrows slider-arrow__left" src = "images/arrow-left-dark.svg" alt = "">',
+        nextArrow: '<img class="slider-arrows slider-arrow__right" src = "images/arrow-right-dark.svg" alt = "">',
         focusOnSelect: true,
         asNavFor: '.slider__surf-map',
     });
@@ -30,6 +30,13 @@ $(function(){
         focusOnSelect: true,
         asNavFor: '.surf-slider',
     });
+
+     $('.travel__slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        prevArrow: '<img class="slider-arrows slider-arrow__left" src = "images/arrow-left-dark.svg" alt = "">',
+        nextArrow: '<img class="slider-arrows slider-arrow__right" src = "images/arrow-right-dark.svg" alt = "">',
+     });
 
   
 });
