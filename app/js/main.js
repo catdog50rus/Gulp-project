@@ -31,12 +31,35 @@ $(function(){
         asNavFor: '.surf-slider',
     });
 
-     $('.travel__slider').slick({
+    $('.page-tour__slider').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         prevArrow: '<img class="slider-arrows slider-arrow__left" src = "images/arrow-left-dark.svg" alt = "">',
         nextArrow: '<img class="slider-arrows slider-arrow__right" src = "images/arrow-right-dark.svg" alt = "">',
-     });
+    });
+
+
+    const allData = $('.page-tour-slider__info-title');
+    let formData = allData.serializeJSON();
+
+    $('total-price').text(getTotalPrice(formData));
+
+    allData.on('keyup change', 'input, select, click, textarea', function () {
+        formData = allData.serializeJSON();
+        console.log(formData);
+
+        $('total-price').text(getTotalPrice(formData));
+    });
+    function getTotalPrice(formData) {
+        let totalPrice = 0;
+
+        totalPrice =
+            formData['night-number'] * 40 +
+            formData['guest-number'] * 25;
+
+        return totalPrice.toFixed(0);
+    };
+
 
   
 });
