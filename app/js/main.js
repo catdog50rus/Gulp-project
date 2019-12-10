@@ -85,6 +85,9 @@ $(function(){
     });
 
     function print() {
+        $('.guest-number').text(guest + ' ');
+        $('.night-number').text(night + ' ');
+        $('.total-price').text(getTotalPrice() + ' ');
         if(night >= 10){
             
             titleNumNight.style.width='265px';
@@ -100,25 +103,24 @@ $(function(){
             titleNumGuest.style.width = '242px';
         }
 
+        if (totalPrice >= 100) {
+
+            titleTotalPrice.style.width = '300px';
+            spanPerNight.style = "margin-right:10px;";
+            //spanPerNight.style="text-aline:none;"
+        }
         if (totalPrice >= 1000) {
 
             titleTotalPrice.style.width = '300px';
-            //spanPerNight.style.marginright = '5px';
+            spanPerNight.style="margin-right:10px;";
+            //spanPerNight.style="text-aline:none;"
         }
-        else {
-            titleTotalPrice.style.width = '270px';
-            //spanPerNight.style.marginright = '35px';
-        }
-
-
-        $('.guest-number').text(guest + ' ');
-        $('.night-number').text(night + ' ');
-        $('.total-price').text(getTotalPrice() + ' ');
+        
     }
     
     function getTotalPrice () {
         totalPrice = 0;
-        totalPrice = (night * 20)*guest;
+        totalPrice = (night * 82)*guest;
         return totalPrice;
     };
   
