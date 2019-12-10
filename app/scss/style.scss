@@ -537,6 +537,7 @@
 
     .page-tour-slider__info-title {
         letter-spacing: 3px;
+        
 
         .night-number,
         .guest-number,
@@ -545,6 +546,13 @@
             font-weight: 800;
             font-size: 40px;
             line-height: 36px;
+        }
+    }
+
+    .title_total-price {
+        width: 270px;
+        .per-night{
+            margin-right: 35px;
         }
     }
 

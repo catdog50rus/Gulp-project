@@ -39,27 +39,87 @@ $(function(){
     });
 
 
-    const allData = $('.page-tour-slider__info-title');
-    let formData = allData.serializeJSON();
+    const guestPlus = document.querySelector('.guest__plus');
+    const guestMinus = document.querySelector('.guest__minus');
+    const nightPlus = document.querySelector('.night__plus');
+    const nightMinus = document.querySelector('.night__minus');
+    let guest = 1;
+    let night = 1;
+    let totalPrice = 0;
+    let titleNumNight = document.querySelector('.title_night-number');
+    let titleNumGuest = document.querySelector('.title_guest-number');
+    let titleTotalPrice = document.querySelector('.title_total-price');
+    let spanPerNight = document.querySelector('.per-night');
+    
+    print();
 
-    $('total-price').text(getTotalPrice(formData));
-
-    allData.on('keyup change', 'input, select, click, textarea', function () {
-        formData = allData.serializeJSON();
-        console.log(formData);
-
-        $('total-price').text(getTotalPrice(formData));
+    guestMinus.addEventListener('click', () => {
+        guest--;
+        if(guest < 0) {
+            guest = 0;
+        }
+        
+        print();
     });
-    function getTotalPrice(formData) {
-        let totalPrice = 0;
 
-        totalPrice =
-            formData['night-number'] * 40 +
-            formData['guest-number'] * 25;
+    guestPlus.addEventListener('click', () => {
+        guest++;
+        print();
+        
+    });
 
-        return totalPrice.toFixed(0);
+    nightMinus.addEventListener('click', () => {
+        night--;
+        if (night < 0) {
+            night = 0;
+        }
+
+        print();
+    });
+
+    nightPlus.addEventListener('click', () => {
+        night++;
+        
+        print();
+
+    });
+
+    function print() {
+        if(night >= 10){
+            
+            titleNumNight.style.width='265px';
+        }
+        else{
+            titleNumNight.style.width = '242px';
+        }
+
+        if (guest >= 10) {
+
+            titleNumGuest.style.width = '270px';
+        } else {
+            titleNumGuest.style.width = '242px';
+        }
+
+        if (totalPrice >= 1000) {
+
+            titleTotalPrice.style.width = '300px';
+            //spanPerNight.style.marginright = '5px';
+        }
+        else {
+            titleTotalPrice.style.width = '270px';
+            //spanPerNight.style.marginright = '35px';
+        }
+
+
+        $('.guest-number').text(guest + ' ');
+        $('.night-number').text(night + ' ');
+        $('.total-price').text(getTotalPrice() + ' ');
+    }
+    
+    function getTotalPrice () {
+        totalPrice = 0;
+        totalPrice = (night * 20)*guest;
+        return totalPrice;
     };
-
-
   
 });
