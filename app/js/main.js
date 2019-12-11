@@ -101,16 +101,16 @@ $(function(){
         
         if (night >= 10) {
 
-            titleNumNight.css({'width':"265px"});
+            titleNumNight.css({'width':'265px'});
         } else {
-            titleNumNight.css({'width':"242px"});
+            titleNumNight.css({'width':'242px'});
         }
 
         if (guest >= 10) {
 
-            titleNumGuest.css({'width':"270px"});
+            titleNumGuest.css({'width':'270px'});
         } else {
-            titleNumGuest.css({'width':"242px"});
+            titleNumGuest.css({'width':'242px'});
         }
 
         
