@@ -537,7 +537,7 @@
 
     .page-tour-slider__info-title {
         letter-spacing: 3px;
-        
+
 
         .night-number,
         .guest-number,
@@ -546,13 +546,14 @@
             font-weight: 800;
             font-size: 40px;
             line-height: 36px;
-            
+
         }
     }
 
     .title_total-price {
         width: 270px;
-        .per-night{
+
+        .per-night {
             margin-right: 35px;
         }
     }
@@ -565,6 +566,11 @@
             top: 20px;
             right: 45px;
             cursor: pointer;
+
+            &:active {
+                top: 21px;
+                right: 44px;
+            }
         }
 
         .guest__plus {
@@ -572,6 +578,11 @@
             top: 14px;
             right: 10px;
             cursor: pointer;
+
+            &:active {
+                top: 15px;
+                right: 9px;
+            }
         }
 
         .night__minus {
@@ -579,6 +590,11 @@
             top: 20px;
             right: 50px;
             cursor: pointer;
+
+            &:active {
+                top: 21px;
+                right: 49px;
+            }
         }
 
         .night__plus {
@@ -586,6 +602,11 @@
             top: 14px;
             right: 15px;
             cursor: pointer;
+
+            &:active {
+                top: 15px;
+                right: 14px;
+            }
         }
 
     }
