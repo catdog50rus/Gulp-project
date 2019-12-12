@@ -518,9 +518,15 @@
         padding-right: 8px;
     }
 
+    .page-tour-slider__info {
+        position: relative;
+        margin-top: 95px;
+    }
+
+
     .page-tour-slider__info img {
         position: absolute;
-        top: 56%;
+        top: -175%;
         right: 0;
     }
 
@@ -615,6 +621,17 @@
 
 }
 
+
+.shop {
+    background-image: url(../images/sleep_frangipani_big.png);
+    background-position: bottom 205px right;
+    background-repeat: no-repeat;
+    position: relative;
+
+    .page-tour-slider__head {
+        background-position: top right;
+    }
+}
 
 
 
