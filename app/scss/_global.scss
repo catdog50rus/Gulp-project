@@ -197,7 +197,7 @@ li {
 }
 
 .page-tour-slider {
-   
+
 
     &__head {
         background-repeat: no-repeat;
@@ -220,6 +220,21 @@ li {
                 position: absolute;
                 right: 0;
                 top: 0;
+            }
+
+            .description__star-list {
+                position: absolute;
+                right: 0;
+                top: 0;
+
+                li {
+                    display: inline-block;
+                }
+
+                img {
+                    position: static;
+
+                }
             }
         }
     }
