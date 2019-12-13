@@ -143,5 +143,6 @@ $(function(){
         return totalPrice;
     };
     
+    
   
 });
